@@ -32,4 +32,8 @@ public class UploadController {
             return ResponseEntity.internalServerError().body("Error saving image: " + e.getMessage());
         }
     }
+    @GetMapping("/hello")
+    public ResponseEntity<String> hello() {
+        return ResponseEntity.ok("Hello from ESP32 Upload Server!");
+    }
 }
